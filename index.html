@@ -3,21 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Cup Goals Visualizations</title>
+    <title>Combined Altair Charts</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .chart-box {
+            width: 45%;
+        }
+        iframe {
+            width: 100%;
+            height: 500px; /* Adjust height as needed */
+            border: none;
+        }
+    </style>
 </head>
 <body>
     <h1>World Cup Goals Visualizations</h1>
 
-    <h2>Chart 1</h2>
-    <iframe src="vis1.html" width="600" height="400"></iframe>
+    <div class="chart-container">
+        <div class="chart-box">
+            <h2>Chart 1</h2>
+            <iframe src="vis1.html"></iframe>
+        </div>
+        <div class="chart-box">
+            <h2>Chart 2</h2>
+            <iframe src="vis2.html"></iframe>
+        </div>
+        <div class="chart-box">
+            <h2>Chart 3</h2>
+            <iframe src="vis3.html"></iframe>
+        </div>
+        <div class="chart-box">
+            <h2>Chart 4</h2>
+            <iframe src="vis4.html"></iframe>
+        </div>
+    </div>
 
-    <h2>Chart 2</h2>
-    <iframe src="vis2.html" width="600" height="400"></iframe>
-
-    <h2>Chart 3</h2>
-    <iframe src="vis3.html" width="600" height="400"></iframe>
-
-    <h2>Chart 4</h2>
-    <iframe src="vis4.html" width="600" height="400"></iframe>
 </body>
 </html>
+
