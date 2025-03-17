@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}}, "layer": [{"mark": {"type": "bar", "height": 15}, "encoding": {"opacity": {"condition": {"param": "param_4", "value": 1}, "value": 0.5}, "tooltip": {"field": "avg_goals_per_game", "format": ".2f", "type": "quantitative"}, "x": {"field": "avg_goals_per_game", "title": null, "type": "quantitative"}, "y": {"field": "Team + Year", "title": null, "type": "nominal"}}, "name": "view_4"}, {"mark": {"type": "rule", "color": "red"}, "encoding": {"size": {"value": 4}, "x": {"aggregate": "mean", "field": "avg_goals_per_game", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_4"}}]}, {"mark": {"type": "text", "align": "left", "color": "red", "dx": 7, "fontSize": 12}, "encoding": {"text": {"aggregate": "mean", "field": "avg_goals_per_game", "format": ".2f", "type": "quantitative"}, "x": {"aggregate": "mean", "field": "avg_goals_per_game", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_4"}}]}], "data": {"name": "data-de3d76d582ef831e9edb0bf431535672"}, "height": 400, "params": [{"name": "param_4", "select": {"type": "interval", "encodings": ["y"]}, "views": ["view_4"]}], "title": {"text": "Goals of World Cup Winners since 1950", "subtitle": "Average Number of Goals per Match of Winning Team"}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-de3d76d582ef831e9edb0bf431535672": [{"year": 1950, "winner": "Uruguay", "avg_goals_per_game": 3.75, "Team + Year": "1950 Uruguay"}, {"year": 1954, "winner": "Germany", "avg_goals_per_game": 4.166666666666667, "Team + Year": "1954 Germany"}, {"year": 1958, "winner": "Brazil", "avg_goals_per_game": 2.6666666666666665, "Team + Year": "1958 Brazil"}, {"year": 1962, "winner": "Brazil", "avg_goals_per_game": 2.3333333333333335, "Team + Year": "1962 Brazil"}, {"year": 1966, "winner": "England", "avg_goals_per_game": 1.8333333333333333, "Team + Year": "1966 England"}, {"year": 1970, "winner": "Brazil", "avg_goals_per_game": 3.1666666666666665, "Team + Year": "1970 Brazil"}, {"year": 1974, "winner": "Germany", "avg_goals_per_game": 1.8571428571428572, "Team + Year": "1974 Germany"}, {"year": 1978, "winner": "Argentina", "avg_goals_per_game": 2.142857142857143, "Team + Year": "1978 Argentina"}, {"year": 1982, "winner": "Italy", "avg_goals_per_game": 1.7142857142857142, "Team + Year": "1982 Italy"}, {"year": 1986, "winner": "Argentina", "avg_goals_per_game": 2.0, "Team + Year": "1986 Argentina"}, {"year": 1990, "winner": "Germany", "avg_goals_per_game": 2.142857142857143, "Team + Year": "1990 Germany"}, {"year": 1994, "winner": "Brazil", "avg_goals_per_game": 1.5714285714285714, "Team + Year": "1994 Brazil"}, {"year": 1998, "winner": "France", "avg_goals_per_game": 2.142857142857143, "Team + Year": "1998 France"}, {"year": 2002, "winner": "Brazil", "avg_goals_per_game": 2.5714285714285716, "Team + Year": "2002 Brazil"}, {"year": 2006, "winner": "Italy", "avg_goals_per_game": 1.7142857142857142, "Team + Year": "2006 Italy"}, {"year": 2010, "winner": "Spain", "avg_goals_per_game": 1.1428571428571428, "Team + Year": "2010 Spain"}, {"year": 2014, "winner": "Germany", "avg_goals_per_game": 2.5714285714285716, "Team + Year": "2014 Germany"}, {"year": 2018, "winner": "France", "avg_goals_per_game": 2.0, "Team + Year": "2018 France"}, {"year": 2022, "winner": "Argentina", "avg_goals_per_game": 2.142857142857143, "Team + Year": "2022 Argentina"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

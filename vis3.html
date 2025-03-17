@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "line", "size": 2.5}, "encoding": {"x": {"axis": {"format": "d"}, "field": "Minute", "scale": {"domain": [0, 120], "nice": true}, "title": "Minute", "type": "quantitative"}, "y": {"axis": {"values": [0, 10, 20, 30, 40, 50, 60, 70, 80]}, "field": "Goals", "scale": {"domain": [0, 80]}, "title": "Goals", "type": "quantitative"}}, "name": "view_8", "title": "Timing of World Cup Goals"}, {"mark": {"type": "rule", "color": "lightgray"}, "encoding": {"opacity": {"condition": {"param": "param_9", "empty": false, "value": 1}, "value": 0}, "size": {"value": 3}, "x": {"field": "Minute", "type": "quantitative"}}, "name": "view_9"}, {"mark": {"type": "point", "size": 90}, "encoding": {"opacity": {"condition": {"param": "param_9", "empty": false, "value": 1}, "value": 0}, "text": {"field": "Goals", "type": "quantitative"}, "x": {"field": "Minute", "type": "quantitative"}, "y": {"axis": {"values": [0, 10, 20, 30, 40, 50, 60, 70, 80]}, "field": "Goals", "scale": {"domain": [0, 80]}, "title": "Goals", "type": "quantitative"}}, "title": "Timing of World Cup Goals"}, {"mark": {"type": "text", "align": "left", "color": "lightgray", "dx": 7, "fontSize": 14}, "encoding": {"opacity": {"condition": {"param": "param_9", "empty": false, "value": 1}, "value": 0}, "text": {"field": "Goals", "type": "quantitative"}, "x": {"field": "Minute", "type": "quantitative"}, "y": {"axis": {"values": [0, 10, 20, 30, 40, 50, 60, 70, 80]}, "field": "Goals", "scale": {"domain": [0, 80]}, "title": "Goals", "type": "quantitative"}}, "title": "Timing of World Cup Goals"}], "data": {"name": "data-66f8c0f415c9e04b23bc5f182a0920ca"}, "height": 400, "params": [{"name": "param_8", "select": {"type": "interval", "encodings": ["x"]}, "bind": "scales", "views": ["view_8"]}, {"name": "param_9", "select": {"type": "point", "encodings": ["x"], "nearest": true, "on": "mouseover"}, "views": ["view_9"]}], "title": {"text": "Timing of World Cup Goals"}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-66f8c0f415c9e04b23bc5f182a0920ca": [{"Minute": 1.0, "Goals": 18}, {"Minute": 2.0, "Goals": 19}, {"Minute": 3.0, "Goals": 24}, {"Minute": 4.0, "Goals": 41}, {"Minute": 5.0, "Goals": 34}, {"Minute": 6.0, "Goals": 32}, {"Minute": 7.0, "Goals": 30}, {"Minute": 8.0, "Goals": 33}, {"Minute": 9.0, "Goals": 30}, {"Minute": 10.0, "Goals": 36}, {"Minute": 11.0, "Goals": 39}, {"Minute": 12.0, "Goals": 44}, {"Minute": 13.0, "Goals": 27}, {"Minute": 14.0, "Goals": 30}, {"Minute": 15.0, "Goals": 40}, {"Minute": 16.0, "Goals": 29}, {"Minute": 17.0, "Goals": 42}, {"Minute": 18.0, "Goals": 45}, {"Minute": 19.0, "Goals": 29}, {"Minute": 20.0, "Goals": 36}, {"Minute": 21.0, "Goals": 34}, {"Minute": 22.0, "Goals": 32}, {"Minute": 23.0, "Goals": 37}, {"Minute": 24.0, "Goals": 39}, {"Minute": 25.0, "Goals": 37}, {"Minute": 26.0, "Goals": 37}, {"Minute": 27.0, "Goals": 35}, {"Minute": 28.0, "Goals": 21}, {"Minute": 29.0, "Goals": 44}, {"Minute": 30.0, "Goals": 23}, {"Minute": 31.0, "Goals": 38}, {"Minute": 32.0, "Goals": 30}, {"Minute": 33.0, "Goals": 24}, {"Minute": 34.0, "Goals": 32}, {"Minute": 35.0, "Goals": 38}, {"Minute": 36.0, "Goals": 33}, {"Minute": 37.0, "Goals": 36}, {"Minute": 38.0, "Goals": 41}, {"Minute": 39.0, "Goals": 44}, {"Minute": 40.0, "Goals": 33}, {"Minute": 41.0, "Goals": 19}, {"Minute": 42.0, "Goals": 34}, {"Minute": 43.0, "Goals": 36}, {"Minute": 44.0, "Goals": 46}, {"Minute": 45.0, "Goals": 25}, {"Minute": 46.0, "Goals": 32}, {"Minute": 47.0, "Goals": 28}, {"Minute": 48.0, "Goals": 44}, {"Minute": 49.0, "Goals": 34}, {"Minute": 50.0, "Goals": 50}, {"Minute": 51.0, "Goals": 44}, {"Minute": 52.0, "Goals": 43}, {"Minute": 53.0, "Goals": 34}, {"Minute": 54.0, "Goals": 46}, {"Minute": 55.0, "Goals": 48}, {"Minute": 56.0, "Goals": 40}, {"Minute": 57.0, "Goals": 44}, {"Minute": 58.0, "Goals": 37}, {"Minute": 59.0, "Goals": 35}, {"Minute": 60.0, "Goals": 48}, {"Minute": 61.0, "Goals": 37}, {"Minute": 62.0, "Goals": 42}, {"Minute": 63.0, "Goals": 34}, {"Minute": 64.0, "Goals": 36}, {"Minute": 65.0, "Goals": 43}, {"Minute": 66.0, "Goals": 41}, {"Minute": 67.0, "Goals": 45}, {"Minute": 68.0, "Goals": 43}, {"Minute": 69.0, "Goals": 46}, {"Minute": 70.0, "Goals": 40}, {"Minute": 71.0, "Goals": 40}, {"Minute": 72.0, "Goals": 31}, {"Minute": 73.0, "Goals": 53}, {"Minute": 74.0, "Goals": 32}, {"Minute": 75.0, "Goals": 59}, {"Minute": 76.0, "Goals": 42}, {"Minute": 77.0, "Goals": 26}, {"Minute": 78.0, "Goals": 46}, {"Minute": 79.0, "Goals": 45}, {"Minute": 80.0, "Goals": 53}, {"Minute": 81.0, "Goals": 51}, {"Minute": 82.0, "Goals": 47}, {"Minute": 83.0, "Goals": 50}, {"Minute": 84.0, "Goals": 41}, {"Minute": 85.0, "Goals": 45}, {"Minute": 86.0, "Goals": 30}, {"Minute": 87.0, "Goals": 37}, {"Minute": 88.0, "Goals": 48}, {"Minute": 89.0, "Goals": 52}, {"Minute": 90.0, "Goals": 41}, {"Minute": 91.0, "Goals": 1}, {"Minute": 92.0, "Goals": 3}, {"Minute": 93.0, "Goals": 6}, {"Minute": 94.0, "Goals": 4}, {"Minute": 95.0, "Goals": 1}, {"Minute": 96.0, "Goals": 1}, {"Minute": 97.0, "Goals": 1}, {"Minute": 98.0, "Goals": 5}, {"Minute": 99.0, "Goals": 1}, {"Minute": 101.0, "Goals": 3}, {"Minute": 102.0, "Goals": 3}, {"Minute": 103.0, "Goals": 1}, {"Minute": 104.0, "Goals": 6}, {"Minute": 105.0, "Goals": 4}, {"Minute": 106.0, "Goals": 1}, {"Minute": 107.0, "Goals": 2}, {"Minute": 108.0, "Goals": 6}, {"Minute": 109.0, "Goals": 2}, {"Minute": 110.0, "Goals": 2}, {"Minute": 111.0, "Goals": 5}, {"Minute": 113.0, "Goals": 1}, {"Minute": 114.0, "Goals": 1}, {"Minute": 115.0, "Goals": 4}, {"Minute": 116.0, "Goals": 3}, {"Minute": 117.0, "Goals": 4}, {"Minute": 118.0, "Goals": 4}, {"Minute": 119.0, "Goals": 2}, {"Minute": 120.0, "Goals": 2}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
